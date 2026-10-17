@@ -1,0 +1,28 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    
+}
+
+.logo {
+    cursor: pointer;
+}
+
+.logouticon {
+    color: rgb(166, 158, 158);
+}
+
+.logouticon:hover {
+    color: rgb(137, 57, 57);
+}
+
+.alert {
+    width: 17rem;
+    position: absolute;
+    margin: 0 auto;
+}
