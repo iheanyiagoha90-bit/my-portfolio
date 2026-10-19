@@ -1,73 +1,24 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHouse,
-  faFutbol,
-  faNewspaper,
-  faUser,
-  faRightFromBracket,
-} from "@fortawesome/free-solid-svg-icons";
+import { faMoon } from "@fortawesome/free-solid-svg-icons";
+import logo from "./images/Logo.png";
 
-export default function Header({ user, setPage, Logout }) {
-  
-
+export default function Header() {
   return (
-    <nav
-      className="navbar navbar-expand-md bg-dark border-bottom border-body p-2"
-      data-bs-theme="dark"
-    >
-      <div className="container-fluid">
-        <span className="navbar-brand logo " onClick={() => setPage("Home")}>
-          Logo
-        </span>
 
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarText"
-          aria-controls="navbarText"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+    <Header className="header">
 
-        <div className="collapse navbar-collapse" id="navbarText">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <button className="nav-link" onClick={() => setPage("Home")}>
-                <FontAwesomeIcon icon={faHouse} className="me-2" />
-                Home
-              </button>
-            </li>
+      <img src={logo} className="headerLogo" alt="header logo"></img>
 
-            <li className="nav-item">
-              <button
-                className="nav-link"
-                onClick={() => setPage("TimeAnalysis")}
-              >
-                <FontAwesomeIcon icon={faFutbol} className="me-2" />
-                Time Analysis
-              </button>
-            </li>
-
-            <li className="nav-item">
-              <button className="nav-link" onClick={() => setPage("Admin")}>
-                <FontAwesomeIcon icon={faNewspaper} className="me-2" />
-                Admin
-              </button>
-            </li>
-          </ul>
-
-          <span className="navbar-text">
-            <FontAwesomeIcon icon={faUser} className="me-2" />
-            {user}
-          </span>
-          <button className="btn" onClick={Logout}>
-            <FontAwesomeIcon icon={faRightFromBracket} className="logouticon" />
-          </button>
-        </div>
+      <nav className="navbar">
+        
+        <a href="#home">Home</a>
+        <a href="#about">Projects</a>
+        <a href="#services">Resume</a>
+        
+      </nav>
+      <div>
+        <FontAwesomeIcon icon={faMoon} className="moonicon" />
       </div>
-    </nav>
+    </Header>
   );
 }

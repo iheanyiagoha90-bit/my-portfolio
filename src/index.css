@@ -1,28 +1,68 @@
-
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
 }
 
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
 }
 
-.logo {
-    cursor: pointer;
+.headerLogo {
+  width: 5rem;
+  height: 5rem;
+  object-fit: contain;
+  cursor: pointer;
 }
 
-.logouticon {
-    color: rgb(166, 158, 158);
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  box-shadow: 10px 5px 1px 50px gray;
 }
 
-.logouticon:hover {
-    color: rgb(137, 57, 57);
+.navbar {
+  display: flex;
+  gap: 30px;
 }
 
-.alert {
-    width: 17rem;
-    position: absolute;
-    margin: 0 auto;
+.navbar a {
+  position: relative;
+  text-decoration: none;
+  color: #817474;
+  font-size: 16px;
+  padding-bottom: 6px;
+}
+
+.navbar a:hover {
+  color: #c27a7a;
+}
+
+/* Underline effect */
+.navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #c27a7a;
+
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+/* Show underline on hover */
+.navbar a:hover::after {
+  transform: scaleX(1);
+}
+
+.moonicon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
 }
