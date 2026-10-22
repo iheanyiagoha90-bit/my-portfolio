@@ -1,20 +1,18 @@
-import {useState} from "react"
+import { useState } from "react";
 import Header from "./Header";
-import Home from "./Pages/Home";
-import About from "./Pages/About";
-import Skills from "./Pages/Skills";
-import Projects from "./Pages/Projects";
-import Experience from "./Pages/Experience";
-import Contact from "./Pages/Contact";
+import Home from "./Pages/Home.jsx";
+import About from "./Pages/About.jsx";
+import Skills from "./Pages/Skills.jsx";
+import Projects from "./Pages/Projects.jsx";
+import Experience from "./Pages/Experience.jsx";
+import Contact from "./Pages/Contact.jsx";
 
-
-export default function App(){
-
-  const [pagechange, setPagechange] = useState("Home")
+export default function App() {
+  const [pagechange, setPagechange] = useState("Home");
   const [isDark, setIsDark] = useState(true);
 
   function toggleTheme() {
-    setIsDark(prev => !prev);
+    setIsDark((prev) => !prev);
   }
 
   return (
